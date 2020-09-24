@@ -7,7 +7,7 @@ class GetRequester
   def initialize(url)
     @url=url
   end
-  #URL="https://learn-co-curriculum.github.io/json-site-example/endpoints/people.json"
+
   def get_response_body
     uri = URI.parse(URL)
   response = Net::HTTP.get_response(uri)
@@ -18,5 +18,3 @@ class GetRequester
     JSON.parse(self.get_response_body)
   end
 end
-# request = GetRequester.new.get_response_body
-# puts request
